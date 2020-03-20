@@ -1,0 +1,94 @@
+:root {
+  --procardValue: 75;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ddd;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.procard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 28rem;
+  height: 35rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 1.5rem 2.5rem -1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1.5rem 2.5rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+.procard__indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 21rem;
+  height: 21rem;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.procard__indicator circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.procard__indicator circle:last-of-type {
+  stroke-dasharray: 62.5rem;
+  stroke-dashoffset: calc(62.5rem - (62.5rem * var(--procardValue)) / 100);
+  stroke: #3498db;
+}
+
+.procard__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 300;
+  font-size: 3.5rem;
+}
+
+.procard__number--unit {
+  font-size: 2.5rem;
+}
+
+.procard__title {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 900;
+}
+/*# sourceMappingURL=main.css.map */
